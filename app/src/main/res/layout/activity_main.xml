@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/CloseButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_close"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/Record"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:text="110"
+            android:textSize="30sp"
+            android:fontFamily="@font/bold"
+            android:textColor="#C0C0C0"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/Heart1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_heart"
+            app:layout_constraintStart_toStartOf="@id/Record"
+            app:layout_constraintTop_toBottomOf="@id/Record" />
+
+        <ImageView
+            android:id="@+id/Heart2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_heart"
+            app:layout_constraintStart_toEndOf="@id/Heart1"
+            app:layout_constraintTop_toBottomOf="@id/Record" />
+
+        <ImageView
+            android:id="@+id/Heart3"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_heart"
+            app:layout_constraintStart_toEndOf="@id/Heart2"
+            app:layout_constraintTop_toBottomOf="@id/Record" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/Word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold"
+        android:text="Galaxy"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CloseButton"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <LinearLayout
+        android:id="@+id/Var1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/shape_round_containers"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Word"
+        app:layout_constraintVertical_bias="0.1">
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="24dp"
+            android:background="@drawable/shape_round_variants"
+            android:fontFamily="@font/bold"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="16dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/Answer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/bold"
+            android:text="Краска"
+            android:textSize="16dp"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Var2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/shape_round_containers"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Var1"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="24dp"
+            android:background="@drawable/shape_round_variants"
+            android:fontFamily="@font/bold"
+            android:gravity="center"
+            android:text="2"
+            android:textSize="16dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/Answer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/bold"
+            android:text="Брызги"
+            android:textSize="16dp"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Var3"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/shape_round_containers"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Var2"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="24dp"
+            android:background="@drawable/shape_round_variants"
+            android:fontFamily="@font/bold"
+            android:gravity="center"
+            android:text="3"
+            android:textSize="16dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/Answer3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/bold"
+            android:text="Галактика"
+            android:textSize="16dp"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Var4"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/shape_round_containers"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Var3"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="24dp"
+            android:background="@drawable/shape_round_variants"
+            android:fontFamily="@font/bold"
+            android:gravity="center"
+            android:text="4"
+            android:textSize="16dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/Answer4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/bold"
+            android:text="Яблоко"
+            android:textSize="16dp"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <android.widget.Button
+        android:id="@+id/SkipButton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="SKIP"
+        android:textSize="16dp"
+        android:textColor="#FFDB4D"
+        android:fontFamily="@font/bold"
+        android:background="@drawable/black_button_background"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Var4" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/CorrectLayout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#04C65D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/CorrectIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_like"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/CorrectText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Correct!"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/bold"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/CorrectIcon"
+            app:layout_constraintStart_toEndOf="@+id/CorrectIcon"
+            app:layout_constraintTop_toTopOf="@+id/CorrectIcon" />
+
+        <android.widget.Button
+            android:id="@+id/ContinueCorrect"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:text="CONTINUE"
+            android:textSize="16dp"
+            android:textColor="#04C65D"
+            android:fontFamily="@font/bold"
+            android:background="@drawable/black_button_background"
+            android:padding="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CorrectIcon"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/IncorrectLayout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#CC2E4F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/IncorrectIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_dislike"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/IncorrectText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Incorrect!"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/bold"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/IncorrectIcon"
+            app:layout_constraintStart_toEndOf="@+id/IncorrectIcon"
+            app:layout_constraintTop_toTopOf="@+id/IncorrectIcon" />
+
+        <android.widget.Button
+            android:id="@+id/ContinueIncorrect"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:text="CONTINUE"
+            android:textSize="16dp"
+            android:textColor="#CC2E4F"
+            android:fontFamily="@font/bold"
+            android:background="@drawable/black_button_background"
+            android:padding="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/IncorrectIcon"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
